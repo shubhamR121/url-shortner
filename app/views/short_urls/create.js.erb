@@ -1,0 +1,1 @@
+$(".list-urls").html("<%= escape_javascript(render '/short_urls/index', locals: { short_urls: @short_urls }).html_safe %>");

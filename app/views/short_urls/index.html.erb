@@ -1,0 +1,10 @@
+<h1>URL Shrinker</h1>
+
+<%= form_for :short_url, url: "short_urls", method: 'post', remote: true do |form| %>
+  <%= form.text_field :full, required: true %>
+  <button type="submit">SHORTEN</button>
+<% end  %>
+
+<div class= "list-urls">
+  <%= render "index", short_urls: @short_urls %>
+</div>

@@ -1,0 +1,19 @@
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Full url</th>
+      <th>Short url</th>
+      <th>Clicked</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @short_urls.each do |short_url| %>
+      <tr>
+        <td> <%= link_to short_url.full, short_url.full %> </td>
+        <td> <%= link_to(short_url.short, short_url, data: { turbolinks: false } ) %> </td>
+        <td> <%= short_url.count %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
